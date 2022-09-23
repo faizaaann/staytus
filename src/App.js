@@ -75,7 +75,7 @@ const App = () => {
             <p className='text-fuchsia-300 text-4xl font-semibold'>
               No Planets Found Where Any Resident Has Specie:{' '}
               {specieClassification.toUpperCase()} You can change this in the
-              utils
+              /src/utils/getPlanets.js
             </p>
             <p className='text-amber-400 text-center text-2xl animate-pulse ease-in-out duration-500 my-4 font-bold'>
               Search for Something Else
