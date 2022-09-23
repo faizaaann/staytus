@@ -30,11 +30,13 @@ const App = () => {
           <h3 className='my-10 mt-20 font-bold text-7xl text-fuchsia-700 text-center'>
             Planets
           </h3>
-          <h6 className='font-bold text-lg text-amber-500 text-center'>
+          <h6 className='font-bold text-lg text-amber-500 text-center mb-5'>
             If one of the residents at the planets has the{' '}
             {specieClassification.toUpperCase()} species, the planet will be
-            listed down here. You can change this in the
-            /src/utils/getPlanets.js
+            listed down here.
+          </h6>
+          <h6 className='font-bold text-lg text-emerald-600 text-center mb-5'>
+            You can change this in the /src/utils/getPlanets.js
           </h6>
           <div className='flex items-center justify-end  w-11/12'>
             <span
@@ -57,13 +59,13 @@ const App = () => {
             </span>
           </div>
           {view === 'List' ? (
-            <div className='mt-10 flex flex-row  flex-wrap justify mx-10 w-100 m-auto p-10 rounded-lg'>
+            <div className='mt-2 flex flex-row  flex-wrap justify mx-10 w-100 m-auto p-10 rounded-lg'>
               {data.map((item, index) => (
                 <List key={index} singlePlanet={item} />
               ))}
             </div>
           ) : (
-            <div className='mt-10 flex flex-row  flex-wrap justify-center w-100 m-auto p-10 rounded-lg'>
+            <div className='mt-2 flex flex-row  flex-wrap justify-center w-100 m-auto p-10 rounded-lg'>
               {data.map((item, index) => (
                 <Card key={index} singlePlanet={item} />
               ))}
@@ -75,10 +77,12 @@ const App = () => {
           <div className='h-40'>
             <p className='text-fuchsia-300 text-4xl font-semibold'>
               No Planets Found Where Any Resident Has Specie:{' '}
-              {specieClassification.toUpperCase()} You can change this in the
-              /src/utils/getPlanets.js
+              {specieClassification.toUpperCase()}
             </p>
-            <p className='text-amber-400 text-center text-2xl animate-pulse ease-in-out duration-500 my-4 font-bold'>
+            <h6 className='font-bold text-lg text-amber-400 text-center mb-5 mt-5'>
+              You can change this in the /src/utils/getPlanets.js
+            </h6>
+            <p className='text-emerald-400 text-center text-2xl animate-pulse ease-in-out duration-500 my-4 font-bold'>
               Search for Something Else
             </p>
           </div>
