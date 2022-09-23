@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import getPlanets from './utils/getPlanets';
+import getPlanets, { specieClassification } from './utils/getPlanets';
 
 import Card from './components/Card';
 import List from './components/List';
@@ -30,9 +30,10 @@ const App = () => {
           <h3 className='my-10 mt-20 font-bold text-7xl text-fuchsia-700 text-center'>
             Planets
           </h3>
-          <h6 className='font-bold text-lg text-amber-300 text-center'>
-            If one of the residents at the planets has the selected species, the
-            planet will be listed down here.
+          <h6 className='font-bold text-lg text-amber-500 text-center'>
+            If one of the residents at the planets has the{' '}
+            {specieClassification.toUpperCase()} species, the planet will be
+            listed down here.
           </h6>
           <div className='flex items-center justify-end  w-11/12'>
             <span
@@ -42,7 +43,7 @@ const App = () => {
                   : 'mr-5 px-8 py-2 bg-white border border-gray-500 rounded-full text-black cursor-pointer hover:bg-slate-500'
               }
               onClick={() => setView('List')}>
-              List
+              List View
             </span>
             <span
               className={
@@ -51,7 +52,7 @@ const App = () => {
                   : 'mr-5 px-8 py-2 bg-white border border-gray-500 rounded-full text-black cursor-pointer hover:bg-slate-500'
               }
               onClick={() => setView('Grid')}>
-              Grid
+              Grid View
             </span>
           </div>
           {view === 'List' ? (
@@ -71,8 +72,9 @@ const App = () => {
       ) : (
         <div className='h-screen flex items-center justify-center bg-slate-700 text-white'>
           <div className='h-40'>
-            <p className='text-fuchsia-300 text-5xl font-semibold'>
-              No Planets Found
+            <p className='text-fuchsia-300 text-4xl font-semibold'>
+              No Planets Found Where Any Resident Has Specie:{' '}
+              {specieClassification.toUpperCase()}
             </p>
             <p className='text-amber-400 text-center text-2xl animate-pulse ease-in-out duration-500 my-4 font-bold'>
               Search for Something Else

@@ -4,6 +4,19 @@ import moment from 'moment';
 import getMovies from '../../utils/getMovies';
 import Loading from '../Loading/Loading';
 
+/**
+ * Component for the Card
+ *
+ * @component
+ * @example
+ *
+ * return <List singlePlanet={singlePlanet}/>
+ *
+ * @returns {ReactElement}
+ * @author Faizan Ahmad <a-f.a@outlook.com>
+ * @version 1.0.0
+ */
+
 const List = ({ singlePlanet }) => {
   const { name, climate, created } = singlePlanet;
 

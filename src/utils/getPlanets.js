@@ -2,7 +2,7 @@ import axios from 'axios';
 import { baseURL } from '../api';
 
 // Classification of the specie on which planets are being filtered
-const specieClassification = 'mammal';
+export const specieClassification = 'mammal';
 
 const getPlanets = async () => {
   try {
