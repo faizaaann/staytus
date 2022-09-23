@@ -33,7 +33,8 @@ const App = () => {
           <h6 className='font-bold text-lg text-amber-500 text-center'>
             If one of the residents at the planets has the{' '}
             {specieClassification.toUpperCase()} species, the planet will be
-            listed down here.
+            listed down here. You can change this in the
+            /src/utils/getPlanets.js
           </h6>
           <div className='flex items-center justify-end  w-11/12'>
             <span
