@@ -2,7 +2,22 @@ import axios from 'axios';
 import { baseURL } from '../api';
 
 // Classification of the specie on which planets are being filtered
+// Change the value here to see the result for different specie
 export const specieClassification = 'mammal';
+
+/**
+ * Function to get the planets which has appeared in a
+ * film and any of the resident has the above mentioned species.
+ *
+ * @function
+ * @example
+ *
+ * return Array of Planet Objects
+ *
+ * @returns {Array}
+ * @author Faizan Ahmad <a-f.a@outlook.com>
+ * @version 1.0.0
+ */
 
 const getPlanets = async () => {
   try {

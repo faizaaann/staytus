@@ -62,7 +62,7 @@ const App = () => {
               ))}
             </div>
           ) : (
-            <div className='mt-10 flex flex-row  flex-wrap justify mx-10 w-100 m-auto p-10 rounded-lg'>
+            <div className='mt-10 flex flex-row  flex-wrap justify-center w-100 m-auto p-10 rounded-lg'>
               {data.map((item, index) => (
                 <Card key={index} singlePlanet={item} />
               ))}

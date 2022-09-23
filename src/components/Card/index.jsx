@@ -5,7 +5,7 @@ import getMovies from '../../utils/getMovies';
 import Loading from '../Loading/Loading';
 
 /**
- * Component for the Card
+ * Component for the Card View
  *
  * @component
  * @example
